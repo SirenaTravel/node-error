@@ -1,0 +1,39 @@
+{
+  "name": "@ips.su/node-error",
+  "version": "1.0.0",
+  "engines" : { "node" : ">=6.2.0" },
+  "description": "Nested Error class ",
+  "main": "./build/index.js",
+  "scripts": {
+    "install-dev-deps": "npm i gulp gulp-typescript merge2 mocha typescript@next dts-bundle through2 --save-dev",
+    "pretest": "rm -rf ./tests/build && cd ./tests && gulp && cd ..",
+    "test": "mocha ./tests/build/index",
+    "build": "rm -rf ./build && gulp",
+    "prepublish": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallride/node-error.git"
+  },
+  "keywords": [
+    "Error"
+  ],
+  "typescript": {
+    "definition": "./build/module.d.ts"
+  },
+  "author": "Ivan Pesochenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallride/node-error/issues"
+  },
+  "homepage": "https://github.com/wallride/node-error#readme",
+  "devDependencies": {
+    "dts-bundle": "^0.4.3",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
+    "merge2": "^1.0.2",
+    "mocha": "^2.5.3",
+    "through2": "^2.0.1",
+    "typescript": "^1.9.0-dev.20160623-1.0"
+  }
+}
