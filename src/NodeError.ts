@@ -55,8 +55,8 @@ export class NodeError extends Error {
         return this;
     };
 
-    protected addItem(name:string, value:any):this{
-        this.items.push(new NodeErrorItem(name, value));
+    protected addItem(name:string, value:any, depth:number = 1):this{
+        this.items.push(new NodeErrorItem(name, value, depth));
 
         return this;
     }
