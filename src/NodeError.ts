@@ -33,6 +33,8 @@ export class NodeError extends Error {
         this.prepareMessage();
     }
 
+    done():this { this.prepareMessage(); return this; }
+
     protected prepareMessage():this {
         this.message = 'thrown at ' + this.context.constructor.name + ': \n       ' + this.errorMessage;
 
@@ -49,19 +51,19 @@ export class NodeError extends Error {
         return this;
     }
 
-    protected addName(name:string):this{
+    addName(name:string):this{
         this.name = super.name + ': '+name;
 
         return this;
     };
 
-    protected addItem(name:string, value:any, depth:number = 1):this{
+    addItem(name:string, value:any, depth:number = 1):this{
         this.items.push(new NodeErrorItem(name, value, depth));
 
         return this;
     }
 
-    protected addError(value:Error):this{
+    addError(value:Error):this{
         this.errors.push(value);
 
         return this;
