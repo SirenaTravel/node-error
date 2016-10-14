@@ -1,6 +1,4 @@
-/// <reference path="./../../typings/tsd.d.ts" />
 import * as errors from './../../build/index'
-
 
 class BaseTestError extends errors.Error {
     name = 'TEST_ERROR';

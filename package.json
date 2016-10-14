@@ -1,7 +1,9 @@
 {
   "name": "@ips.su/node-error",
-  "version": "1.0.2",
-  "engines" : { "node" : ">=6.2.0" },
+  "version": "1.0.4",
+  "engines": {
+    "node": ">=6.5.0"
+  },
   "description": "Nested Error class ",
   "main": "./build/index.js",
   "scripts": {
@@ -28,12 +30,14 @@
   },
   "homepage": "https://github.com/wallride/node-error#readme",
   "devDependencies": {
+    "@types/mocha": "^2.2.32",
     "dts-bundle": "^0.4.3",
     "gulp": "^3.9.1",
-    "gulp-typescript": "^2.13.6",
+    "gulp-typescript": "^3.0.2",
     "merge2": "^1.0.2",
     "mocha": "^2.5.3",
     "through2": "^2.0.1",
-    "typescript": "^1.9.0-dev.20160623-1.0"
-  }
+    "typescript": "^2.1.0-dev.20161014"
+  },
+  "dependencies": {}
 }
